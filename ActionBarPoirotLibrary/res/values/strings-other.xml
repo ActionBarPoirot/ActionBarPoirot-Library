@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--
+**
+** 	 Copyright (C) 2014 pjv (and others)
+**
+** 	 This file is part of ActionBarPoirot.
+**
+**   ActionBarPoirot is free software: you can redistribute it and/or modify
+**   it under the terms of the GNU General Public License as published by
+**   the Free Software Foundation, either version 3 of the License, or
+**   (at your option) any later version.
+**
+**   ActionBarPoirot is distributed in the hope that it will be useful,
+**   but WITHOUT ANY WARRANTY; without even the implied warranty of
+**   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+**   GNU General Public License for more details.
+**
+**   You should have received a copy of the GNU General Public License
+**   along with ActionBarPoirot.  If not, see <http://www.gnu.org/licenses/>.
+*/
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- from AOSP -->
+    <!-- Title for a button to expand the list of activities in ActivityChooserView [CHAR LIMIT=25] -->
+    <string name="activity_chooser_view_see_all">See all</string>
+    <!-- Title default for a dialog showing possible activities in ActivityChooserView [CHAR LIMIT=25]. Changed for Collectionista! -->
+    <string name="activity_chooser_view_dialog_title_default">Choose action</string>
+    <!-- ActivityChooserView - accessibility support -->
+    <!-- Description of the shwoing of a popup window with activities to choose from. [CHAR LIMIT=NONE] Changed for Collectionista!-->
+    <string name="activitychooserview_choose_application">Choose an action</string>
+    <!-- Title for a dialog showing possible activities for sharing in ShareActionProvider [CHAR LIMIT=25] -->
+    <string name="share_action_provider_share_with">Share with</string>
+    <!-- ShareActionProvider - accessibility support -->
+    <!-- Description of the choose target button in a ShareActionProvider (share UI). [CHAR LIMIT=NONE] -->
+    <string name="shareactionprovider_share_with">Share with</string>
+    <!-- Description of a share target (both in the list of such or the default share button) in a ShareActionProvider (share UI). [CHAR LIMIT=NONE] -->
+    <string name="shareactionprovider_share_with_application">Share with <xliff:g id="application_name" example="Bluetooth">%s</xliff:g></string>
+    
+    
+    <!-- Tasks -->
+    <string name="task_no_room">There are currently too many background tasks. Please try again in a moment.</string>
+    <string name="progress_failed_product_exists">This product already exists in your collection.</string>
+    <string name="progress_failed_task_exists">Another similar task is already pending or running.</string>
+    
+</resources>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+**
+** 	 Copyright (C) 2014 pjv (and others)
+**
+** 	 This file is part of ActionBarPoirot.
+**
+**   ActionBarPoirot is free software: you can redistribute it and/or modify
+**   it under the terms of the GNU General Public License as published by
+**   the Free Software Foundation, either version 3 of the License, or
+**   (at your option) any later version.
+**
+**   ActionBarPoirot is distributed in the hope that it will be useful,
+**   but WITHOUT ANY WARRANTY; without even the implied warranty of
+**   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+**   GNU General Public License for more details.
+**
+**   You should have received a copy of the GNU General Public License
+**   along with ActionBarPoirot.  If not, see <http://www.gnu.org/licenses/>.
+*/
+-->
+<resources>
+    <!-- These are the standard attributes that make up a complete theme. -->
+    <declare-styleable name="Theme">
+        <!-- from AOSP -->
+        <!-- Default ActivityChooserView style. -->
+        <attr name="activityChooserViewStyle" format="reference" />
+        <!-- The preferred item height for dropdown lists. -->
+        <attr name="dropdownListPreferredItemHeight" format="dimension" />
+        <!-- Drawable to use for the Share action button in WebView selection action modes -->
+        <attr name="actionModeShareDrawable" format="reference" />
+        <!-- Icon drawable to use for alerts -->
+<!--         <attr name="alertDialogIcon" format="reference" /> -->
+    </declare-styleable>
+    
+    <!-- from AOSP -->
+    <!-- Attrbitutes for a ActvityChooserView. -->
+    <declare-styleable name="ActivityChooserView">
+        <!-- The maximal number of items initially shown in the activity list. -->
+        <attr name="initialActivityCount" format="string" />
+        <!-- The drawable to show in the button for expanding the activities overflow popup.
+             <strong>Note:</strong> Clients would like to set this drawable
+             as a clue about the action the chosen activity will perform. For
+             example, if share activity is to be chosen the drawable should
+             give a clue that sharing is to be performed.
+         -->
+        <attr name="expandActivityOverflowButtonDrawable" format="reference" />
+    </declare-styleable>
+</resources>

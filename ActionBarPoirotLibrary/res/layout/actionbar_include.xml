@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE merge>
+<!--
+**
+** 	 Copyright (C) 2014 pjv (and others)
+**
+** 	 This file is part of ActionBarPoirot.
+**
+**   ActionBarPoirot is free software: you can redistribute it and/or modify
+**   it under the terms of the GNU General Public License as published by
+**   the Free Software Foundation, either version 3 of the License, or
+**   (at your option) any later version.
+**
+**   ActionBarPoirot is distributed in the hope that it will be useful,
+**   but WITHOUT ANY WARRANTY; without even the implied warranty of
+**   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+**   GNU General Public License for more details.
+**
+**   You should have received a copy of the GNU General Public License
+**   along with ActionBarPoirot.  If not, see <http://www.gnu.org/licenses/>.
+*/
+-->
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:app="http://schemas.android.com/net.lp.collectionista">
+    <!--  Remove if you are not using Johan Nilsson's action bar (com.markupartist.android.widget.ActionBar). -->
+    <com.markupartist.android.widget.ActionBar
+	    android:id="@+id/actionbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+	    app:title="@string/app_name"
+        />
+</merge>

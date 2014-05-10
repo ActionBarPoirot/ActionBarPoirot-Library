@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+**
+** 	 Copyright (C) 2014 pjv (and others)
+**
+** 	 This file is part of ActionBarPoirot.
+**
+**   ActionBarPoirot is free software: you can redistribute it and/or modify
+**   it under the terms of the GNU General Public License as published by
+**   the Free Software Foundation, either version 3 of the License, or
+**   (at your option) any later version.
+**
+**   ActionBarPoirot is distributed in the hope that it will be useful,
+**   but WITHOUT ANY WARRANTY; without even the implied warranty of
+**   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+**   GNU General Public License for more details.
+**
+**   You should have received a copy of the GNU General Public License
+**   along with ActionBarPoirot.  If not, see <http://www.gnu.org/licenses/>.
+*/
+-->
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Activity chooser styles. -->
+    <style name="Widget.ActivityChooserView" parent="android:Widget">
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/ab_share_pack_holo_dark</item>
+        <item name="android:divider">?android:attr/dividerVertical</item>
+        <item name="android:showDividers" tools:ignore="NewApi">middle</item>
+        <item name="android:dividerPadding" tools:ignore="NewApi">6dp</item>
+    </style>   
+     
+    <style name="Widget.Holo.ActivityChooserView" parent="Widget.ActivityChooserView">
+    </style>
+    
+    <style name="Widget.Holo.Light.ActivityChooserView" parent="Widget.Holo.ActivityChooserView">
+        <item name="android:background">@drawable/ab_share_pack_holo_light</item>
+    </style>
+    
+    <!-- Custom Compat ActionBar -->
+<!--     <style name="ActionBar">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/actionbar_height</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@drawable/actionbar_background</item>
+    </style>
+    
+    <style name="ActionBarItem">
+        <item name="android:layout_width">@dimen/actionbar_item_width</item>
+        <item name="android:layout_height">@dimen/actionbar_height</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_marginLeft" tools:ignore="PxUsage">1px</item>
+    </style>
+
+    <style name="ActionBarHomeItem" parent="ActionBarItem">
+        <item name="android:layout_marginRight" tools:ignore="PxUsage">1px</item>
+        <item name="android:layout_marginLeft">0px</item>
+    </style> -->
+
+</resources>

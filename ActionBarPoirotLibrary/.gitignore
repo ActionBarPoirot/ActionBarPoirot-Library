@@ -1,0 +1,11 @@
+local.properties
+.settings
+assets
+bin/
+bin/*
+gen/
+gen/*
+hs_err_pid*
+*.zip
+libs/
+libs/*

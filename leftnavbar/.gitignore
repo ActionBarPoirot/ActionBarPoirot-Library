@@ -1,0 +1,8 @@
+local.properties
+.settings
+bin/
+bin/*
+gen/
+gen/*
+hs_err_pid*
+*.zip
