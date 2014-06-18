@@ -140,6 +140,12 @@ public abstract class VisibleTask<Params, Progress, Result, E extends Throwable 
 	public void onPreExecute() {
 		// Only if we haven't got the progressbar yet.
 		if (progressBar == null) {
+
+			//Temporary NPE code, can be removed later
+	        if(getPanel() == null){
+	        	throw new IllegalArgumentException("Panel is null in onPreExecute.");
+	        }
+	        
 			// Find the progressbar and reset progress visually
 			progressBar = (ProgressBar) getPanel().findViewById(R.id.progress);
 			if (hasDeterminateProgressBar()){
