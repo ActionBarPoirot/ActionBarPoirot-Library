@@ -38,6 +38,7 @@ package net.lp.actionbarpoirot.actionprovider;
 import net.lp.actionbarpoirot.R;
 import net.lp.actionbarpoirot.actionprovider.ActivityChooserModel.OnChooseActivityListener;
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -103,9 +104,14 @@ import android.view.View;
         new MenuItemOnMenuItemClickListener();
 
     /**
-     * Context for accessing resources.
+     * Context for accessing resources (themed).
      */
     protected final Context mContext;
+
+    /**
+     * Activity for doing startActivity() with.
+     */
+    protected final Activity mActivity;
 
     /**
      * The name of the file with history data.
@@ -129,9 +135,10 @@ import android.view.View;
      *
      * @param context Context for accessing resources.
      */
-    public CustomActionProvider(Context context, String defaultHistoryFileName) {
+    public CustomActionProvider(Activity context, Context themedContext, String defaultHistoryFileName) {
         super(context);
-        mContext = context;
+        mActivity = context;
+        mContext = themedContext;
         setHistoryFileName(defaultHistoryFileName);
     }
 
@@ -157,7 +164,7 @@ import android.view.View;
     public View onCreateActionView() {
         // Create the view and set its data model.
         ActivityChooserModel dataModel = ActivityChooserModel.get(mContext, mHistoryFileName);
-        ActivityChooserView activityChooserView = new ActivityChooserView(mContext);
+        ActivityChooserView activityChooserView = new ActivityChooserView(mActivity);
         activityChooserView.setActivityChooserModel(dataModel);
 
         // Lookup and set the expand action icon.

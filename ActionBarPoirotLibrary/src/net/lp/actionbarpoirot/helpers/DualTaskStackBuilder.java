@@ -115,7 +115,7 @@ public class DualTaskStackBuilder implements Iterable<Intent> {
 	 *            PendingIntent
 	 * @return A new DualTaskStackBuilder
 	 */
-	public static DualTaskStackBuilder create(Context context) {
+	public static DualTaskStackBuilder create(Activity context) {
 		return new DualTaskStackBuilder(context);
 	}
 
@@ -131,15 +131,15 @@ public class DualTaskStackBuilder implements Iterable<Intent> {
 	 * @deprecated use {@link #create(Context)} instead
 	 */
 	@Deprecated
-	public static DualTaskStackBuilder from(Context context) {
+	public static DualTaskStackBuilder from(Activity context) {
 		return create(context);
 	}
 
 	private final ArrayList<Intent> mIntents = new ArrayList<Intent>();
 
-	private final Context mSourceContext;
+	private final Activity mSourceContext;
 
-	private DualTaskStackBuilder(Context a) {
+	private DualTaskStackBuilder(Activity a) {
 		mSourceContext = a;
 	}
 

@@ -39,6 +39,7 @@ import net.lp.actionbarpoirot.R;
 import net.lp.actionbarpoirot.actionprovider.ActivityChooserModel.ActivityChooserModelClient;
 import net.lp.actionbarpoirot.util.UiUtilities;
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -210,14 +211,14 @@ import android.widget.TextView;
      */
     private int mDefaultActionButtonContentDescription;
 
-	private Context mContext;
+	private Activity mContext;
 
     /**
      * Create a new instance.
      *
      * @param context The application environment.
      */
-    public ActivityChooserView(Context context) {
+    public ActivityChooserView(Activity context) {
         this(context, null);
     }
 
@@ -227,7 +228,7 @@ import android.widget.TextView;
      * @param context The application environment.
      * @param attrs A collection of attributes.
      */
-    public ActivityChooserView(Context context, AttributeSet attrs) {
+    public ActivityChooserView(Activity context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
@@ -238,7 +239,7 @@ import android.widget.TextView;
      * @param attrs A collection of attributes.
      * @param defStyle The default style to apply to this view.
      */
-    public ActivityChooserView(Context context, AttributeSet attrs, int defStyle) {
+    public ActivityChooserView(Activity context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
     	mContext = context;
 

@@ -39,6 +39,7 @@ import java.util.Locale;
 
 import net.lp.actionbarpoirot.PoirotWindow;
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -409,7 +410,7 @@ public class UiUtilities {
 				longToast ? Toast.LENGTH_LONG : Toast.LENGTH_SHORT).show();
 	}
 
-	public static void startHomeActivity(Context context,
+	public static void startHomeActivity(Activity context,
 			Intent defaultHomeIntent) {
 		final Intent homeIntent = defaultHomeIntent;
 		// final Intent homeIntent = new Intent(Intent.ACTION_VIEW,

@@ -18,6 +18,7 @@ package com.markupartist.android.widget;
 
 import java.util.LinkedList;
 
+import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
@@ -186,10 +187,10 @@ public class ActionBar extends RelativeLayout implements OnClickListener {
     }
 
     public static class IntentAction extends AbstractAction {
-        private Context mContext;
+        private Activity mContext;
         private Intent mIntent;
 
-        public IntentAction(Context context, Intent intent, int drawable) {
+        public IntentAction(Activity context, Intent intent, int drawable) {
             super(drawable);
             mContext = context;
             mIntent = intent;
