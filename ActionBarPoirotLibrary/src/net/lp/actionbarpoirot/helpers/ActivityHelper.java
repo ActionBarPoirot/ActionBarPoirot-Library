@@ -162,7 +162,7 @@ public class ActivityHelper {
 	 *
 	 * @return intent action
 	 */
-	public Action getHomeIntentAction(Context context) {//TODO: leaks context?
+	public Action getHomeIntentAction(Activity context) {//TODO: leaks context?
 		if(homeIntentAction == null){
 			//Not using LAUNCH because there might be multiple in the future.
 	        homeIntentAction = new IntentAction(context, ((ActivityHelperUser)mActivity).getHomeIntent(), R.drawable.ic_title_home_default);
