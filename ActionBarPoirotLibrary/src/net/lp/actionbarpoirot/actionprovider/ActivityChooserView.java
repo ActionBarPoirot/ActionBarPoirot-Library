@@ -211,15 +211,23 @@ import android.widget.TextView;
      */
     private int mDefaultActionButtonContentDescription;
 
-	private Activity mContext;
+    /**
+     * Context for accessing resources (themed).
+     */
+    private final Context mContext;
+
+    /**
+     * Activity for doing startActivity() with.
+     */
+    private final Activity mActivity;
 
     /**
      * Create a new instance.
      *
      * @param context The application environment.
      */
-    public ActivityChooserView(Activity context) {
-        this(context, null);
+    public ActivityChooserView(Activity context, Context themedContext) {
+        this(context, themedContext, null);
     }
 
     /**
@@ -228,8 +236,8 @@ import android.widget.TextView;
      * @param context The application environment.
      * @param attrs A collection of attributes.
      */
-    public ActivityChooserView(Activity context, AttributeSet attrs) {
-        this(context, attrs, 0);
+    public ActivityChooserView(Activity context, Context themedContext, AttributeSet attrs) {
+        this(context, themedContext, attrs, 0);
     }
 
     /**
@@ -239,9 +247,10 @@ import android.widget.TextView;
      * @param attrs A collection of attributes.
      * @param defStyle The default style to apply to this view.
      */
-    public ActivityChooserView(Activity context, AttributeSet attrs, int defStyle) {
-        super(context, attrs, defStyle);
-    	mContext = context;
+    public ActivityChooserView(Activity context, Context themedContext, AttributeSet attrs, int defStyle) {
+        super(themedContext, attrs, defStyle);
+        mActivity = context;
+    	mContext = themedContext;
 
         TypedArray attributesArray = context.obtainStyledAttributes(attrs,
                 R.styleable.ActivityChooserView, defStyle, 0);
@@ -620,7 +629,7 @@ import android.widget.TextView;
                         Intent launchIntent = mAdapter.getDataModel().chooseActivity(position);
                         if (launchIntent != null) {
                             launchIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
-                            mContext.startActivity(launchIntent);
+                            mActivity.startActivity(launchIntent);
                         }
                     }
                 } break;
@@ -638,7 +647,7 @@ import android.widget.TextView;
                 Intent launchIntent = mAdapter.getDataModel().chooseActivity(index);
                 if (launchIntent != null) {
                     launchIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
-                    mContext.startActivity(launchIntent);
+                    mActivity.startActivity(launchIntent);
                 }
             } else if (view == mExpandActivityOverflowButton) {
                 mIsSelectingDefaultActivity = false;

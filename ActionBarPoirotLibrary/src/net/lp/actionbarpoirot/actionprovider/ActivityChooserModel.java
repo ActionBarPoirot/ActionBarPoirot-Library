@@ -114,6 +114,11 @@ import android.util.Xml;
  */
 @TargetApi(Build.VERSION_CODES.HONEYCOMB) public class ActivityChooserModel extends DataSetObservable {
 
+	/**
+	 * Category that says that this action is not a regular INSERT but a SCAN_ADD.
+	 */
+	public static final String COLLECTIONISTA_CATEGORY_SCAN_ADD = "net.lp.collectionista.category.SCAN_ADD";
+	
     /**
      * Client that utilizes an {@link ActivityChooserModel}.
      */
@@ -505,7 +510,7 @@ import android.util.Xml;
         		PackageManager pm = mContext.getPackageManager();
         		//Check if device has autofocus camera //BUGSOLVED #801777 //TODO: later add a textual input for a query so this switch can happen a bit later.
         		if(pm.hasSystemFeature(PackageManager.FEATURE_CAMERA) && pm.hasSystemFeature(PackageManager.FEATURE_CAMERA_AUTOFOCUS)){
-        			//choiceIntent.addCategory(Collectionista.CATEGORY_SCAN_ADD); //TODO: ActionBarPoirot
+        			choiceIntent.addCategory(COLLECTIONISTA_CATEGORY_SCAN_ADD); //TODO: ActionBarPoirot
         		}
             }
             
@@ -747,7 +752,7 @@ import android.util.Xml;
     		//Check if device has autofocus camera
     		if(pm.hasSystemFeature(PackageManager.FEATURE_CAMERA) && pm.hasSystemFeature(PackageManager.FEATURE_CAMERA_AUTOFOCUS)){
 	            Intent intent = (Intent) mIntent.clone();
-	            //intent.addCategory(Collectionista.CATEGORY_SCAN_ADD);//TODO: ActionBarPoirot
+	            intent.addCategory(COLLECTIONISTA_CATEGORY_SCAN_ADD);//TODO: ActionBarPoirot
 	            intent.addCategory("net.lp.collectionista.category.SCAN_ADD");
 	            resolveInfos = mContext.getPackageManager()
 	                    .queryIntentActivities(intent, 0);

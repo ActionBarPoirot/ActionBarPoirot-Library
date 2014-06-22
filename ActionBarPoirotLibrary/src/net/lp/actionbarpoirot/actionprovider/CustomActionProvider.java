@@ -164,7 +164,7 @@ import android.view.View;
     public View onCreateActionView() {
         // Create the view and set its data model.
         ActivityChooserModel dataModel = ActivityChooserModel.get(mContext, mHistoryFileName);
-        ActivityChooserView activityChooserView = new ActivityChooserView(mActivity);
+        ActivityChooserView activityChooserView = new ActivityChooserView(mActivity, mContext);
         activityChooserView.setActivityChooserModel(dataModel);
 
         // Lookup and set the expand action icon.
