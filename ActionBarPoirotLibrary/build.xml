@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE project>
 <project name="actionbarpoirot" default="help">
 
     <!-- The local.properties file is created and updated by the 'android' tool.
@@ -87,7 +86,13 @@
          In all cases you must update the value of version-tag below to read 'custom' instead of an integer,
          in order to avoid having your file be overridden by tools such as "android update project"
     -->
-    <!-- version-tag: 1 -->
+    
+    <!-- Customized toplevel Collectionista build.xml containing one overriding target from the tools/ant/build.xml. -->
+    <import file="../../collectionista-main/collectionista-library/collectionista-build.xml" />
+    
+    
+
+    <!-- version-tag: custom -->
     <import file="${sdk.dir}/tools/ant/build.xml" />
 
 </project>

@@ -323,15 +323,6 @@ public abstract class UiAction<C extends FragmentActivity & PoirotWindow & Activ
 	}
 
 	/*
-	 * Returns how many requestCodeId's this action would like to claim.  Typically 1, but if more, then the next numbered {@link UiAction} will have a first requestCodeId that is maxOffset more than this one.
-	 * 
-	 * @return maximum offset for requestCodeId's.
-	 */
-	protected int getMaxOffset() {
-		return 1;
-	}
-
-	/*
 	 * Returns the (maximum) range of orders for this one action. {@link
 	 * UiAction}s need to be ordered in order for {@link onActivityResult()} to
 	 * work. Some need a multiplicity of their order number. Basically, this is
@@ -546,7 +537,7 @@ public abstract class UiAction<C extends FragmentActivity & PoirotWindow & Activ
 	 */
 	public int setOrder(int i) {
 		menuItemAndRequestCodeId = i;
-		return i + getMaxOffset();
+		return i + getMaxOrderRange();
 	}
 
 	/**
